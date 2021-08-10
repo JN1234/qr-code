@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "CBU QR",
+    "slug": "CBU-QR",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/cbu-logo.png",
+    "splash": {
+      "image": "./assets/cbu-logo1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/cbu-logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "icon": "./assets/cbu-logo.png",
+      "package": "com.rndpilgrim.CBUQR"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
