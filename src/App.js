@@ -34,9 +34,9 @@ function QRscanner(props) {
       var opts = {
         errorCorrectionLevel: { errorCorrection },
         type: `image/${imageType}`,
-        quality: 1,
+        quality: 0.92,
         margin: 1,
-        width: 200,
+        width: 100,
       };
       const response = await QRCode.toDataURL(text, opts);
       setImageUrl(response);
@@ -47,6 +47,14 @@ function QRscanner(props) {
       setGenError(error.toString());
       setImageUrl(null);
     }
+  };
+
+  const handleFuncTypeChange = (data) => {
+    if (data === "generate") {
+      setHasResult(false);
+    }
+    setFuncType(data);
+    setImageUrl("");
   };
   const handleErrorFile = (error) => {
     console.log(error);
@@ -232,7 +240,7 @@ function QRscanner(props) {
     <Container maxWidth={"sm"} className={classes.conatiner}>
       <Card>
         <CardContent>
-          <ChipsArray setFunc={setFuncType} />
+          <ChipsArray setFunc={handleFuncTypeChange} />
           {scanMarkUp}
           <Grid container style={{ marginTop: 40 }}>
             <Grid item xs={12}></Grid>

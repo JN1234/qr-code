@@ -45,7 +45,7 @@ class DeleteExhibit extends Component {
               color: "green",
               cursor: "pointer",
               position: "relative",
-              top: 3,
+              top: 15,
             }}
           />
         </Typography>

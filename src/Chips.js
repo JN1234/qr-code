@@ -19,7 +19,7 @@ const styles = {
 };
 const chipData = [
   { key: 0, label: "Scan" },
-  { key: 1, label: "Upload File to scan" },
+  { key: 1, label: "Upload file to scan" },
 
   { key: 2, label: "Generate QRcode" },
 ];
@@ -41,7 +41,7 @@ export default function ChipsArray(props) {
       {chipData.map((data) => {
         let icon;
 
-        if (data.label === "Upload File to scan") {
+        if (data.label === "Upload file to scan") {
           icon = <AddAPhotoIcon />;
         }
         if (data.label === "Scan") {
